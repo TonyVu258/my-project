@@ -1,0 +1,30 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 20px;
+    background-color: #008DDA;
+    text-transform: uppercase;
+}
+
+.navList {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navItem {
+    margin-left: 20px;
+}
+
+.navLink {
+    color: #F7EEDD;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navLink:hover {
+    color: #F7EEDD;
+}

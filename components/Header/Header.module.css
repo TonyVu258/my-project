@@ -1,0 +1,12 @@
+.header {
+    color: #F7EEDD;
+    text-align: center;
+    max-height: 200px;
+}
+
+.logo {
+    padding: 40px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
