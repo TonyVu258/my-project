@@ -4,13 +4,18 @@ import ProductDetail from '@/components/Product/ProductDetail';
 import styles from "@/app/music/page.module.css"
 
 async function fetchProductData(id) {
-    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
-    var response = await fetch(`${baseUrl}/api/music/${id}`);
-    if (!response.ok) {
-        response = await fetch(`/api/music/${id}`);
+    try {
+        const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+        var response = await fetch(`${baseUrl}/api/music/${id}`);
+        if (!response.ok) {
+            response = await fetch(`/api/music/${id}`);
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Fetch error:', error);
+        return null; // Handle error state in UI
     }
-    const data = await response.json();
-    return data;
 }
 
 export default async function MusicItemPage({ params }) {
