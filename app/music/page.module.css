@@ -1,0 +1,14 @@
+.main {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.mainItem {
+    text-align: center;
+}
+
+.mainItem h1{
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}

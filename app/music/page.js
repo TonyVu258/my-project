@@ -6,8 +6,8 @@ import Footer from '@/components/Footer';
 
 const images = [
     { src: '/images/demo1.jpg', alt: 'Slide 1', link:'/item1'},
-    { src: '/images/demo1.jpg', alt: 'Slide 2', link:'/item2' },
-    { src: '/images/demo1.jpg', alt: 'Slide 3', link:'/item3' },
+    { src: '/images/demo2.jpg', alt: 'Slide 2', link:'/item2' },
+    { src: '/images/demo3.jpg', alt: 'Slide 3', link:'/item3' },
   ];
 
 function Music() {

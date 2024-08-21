@@ -5,20 +5,18 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import SlideBannerImage from './SlideBannerImage';
-import { EffectCoverflow, Pagination } from 'swiper/modules';
-
-
+import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 
 const SlideBanner = ({ children }) => {
     return (
         <Swiper
-            loop={true}
             navigation={true}
-            spaceBetween={30}
+            loop={true}
             autoplay={{
-                delay: 3000,
+                delay: 2500,
                 disableOnInteraction: false,
             }}
+            speed={800}
             effect={'coverflow'}
             grabCursor={true}
             centeredSlides={true}
@@ -28,10 +26,10 @@ const SlideBanner = ({ children }) => {
                 stretch: 0,
                 depth: 100,
                 modifier: 1,
-                slideShadows: true,
+                slideShadows: false,
             }}
             pagination={{ clickable: true }}
-            modules={[EffectCoverflow, Pagination]}
+            modules={[Autoplay,EffectCoverflow, Pagination]}
             className="mySwiper"
         >
             {children.map((image, index) => {
