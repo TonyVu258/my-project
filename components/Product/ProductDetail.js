@@ -1,6 +1,7 @@
-// components/ProductDetail.js
 import React from 'react';
 import styles from './Product.module.css';
+import Form from '../Form';
+import Button from '../Button';
 
 const ProductDetail = ({ product }) => {
   return (
@@ -12,7 +13,8 @@ const ProductDetail = ({ product }) => {
         <h1 className={styles.productTitle}>{product.title}</h1>
         <p className={styles.productDescription}>{product.description}</p>
         <p className={styles.productPrice}>${product.price}</p>
-        <button className={styles.addToCartButton}>Add to Cart</button>
+        <Button title={'Add to Cart'}></Button>
+        <Form type="payment" />
       </div>
     </div>
   );

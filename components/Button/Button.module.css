@@ -1,0 +1,35 @@
+.customButton {
+    position: relative;
+    display: inline-flex;
+    padding: 15px 40px;
+    background: #363636;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    overflow: hidden;
+    border: none !important;
+    border-radius: 6px;
+}
+
+.customButton span{
+    position: relative;
+    z-index: 1;
+}
+
+.customButton::before{
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background: #2196f3;
+    transition: width 0.7s, height 0.7s;
+}
+
+.customButton:hover::before{
+    width: 600px;
+    height: 600px;
+}

@@ -4,8 +4,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import SlideBannerImage from './SlideBannerImage';
 import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
+import Link from 'next/link';
+import styles from './Banner.module.css'
 
 const SlideBanner = ({ children }) => {
     return (
@@ -35,7 +36,7 @@ const SlideBanner = ({ children }) => {
             {children.map((image, index) => {
                 return (
                     <SwiperSlide key={index}>
-                        <SlideBannerImage imgSrc={image.src} imgAlt={image.alt} link={image.link}/>
+                        <Link href={`/music${image.link}`}><img className={styles.sildeImage} src={image.src} alt={image.alt} style={{ width: '45%', objectFit: 'cover' }} /></Link>
                     </SwiperSlide>
                 );
             })}

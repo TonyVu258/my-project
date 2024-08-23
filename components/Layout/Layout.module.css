@@ -1,0 +1,16 @@
+.mainContent{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; 
+    height: 70vh;
+}
+
+.mainContent h1{
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
